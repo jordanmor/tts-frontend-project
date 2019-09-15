@@ -20,7 +20,7 @@
 
                 <div class="sidebar-header">
                     <div id="dismiss" class="dismiss">
-                        <span class="dismiss-icon">x</span>
+                        <span class="dismiss-icon">&times</span>
                         <span class="dismiss-text">Close</span>
                     </div>
                 </div>
@@ -28,7 +28,10 @@
                 <ul class="menu">
 
                     <li>
-                        <a href="#autoSubmenu" data-toggle="collapse" aria-expanded="false">Auto</a>
+                        <div class="main-selection">
+                            <a class="collapsed" href="#autoSubmenu" data-toggle="collapse" aria-expanded="false">Auto</a>
+                            <img src="img/down-arrow.svg" alt="Down arrow">
+                        </div>
                         <ul class="collapse sub-menu" id="autoSubmenu">
                             <li><a href="#">Car Insurance</a></li>
                             <li><a href="#">Classic Car Insurance</a></li>
@@ -37,7 +40,10 @@
                     </li>
 
                     <li>
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+                        <div class="main-selection">
+                            <a class="collapsed" href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+                            <img src="img/down-arrow.svg" alt="Down arrow">
+                        </div>
                         <ul class="collapse sub-menu" id="homeSubmenu">
                             <li><a href="#">Homeowners Insurance</a></li>
                             <li><a href="#">Renters Insurance</a></li>

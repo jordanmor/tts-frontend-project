@@ -171,6 +171,26 @@ a:focus {
     padding: 20px 6px 0;
   }
 
+  .sidebar .main-selection {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .sidebar .main-selection img {
+      width: .8rem;
+      margin: 0 6px 6px 0;
+  }
+
+  .sidebar .main-selection a ~ img {
+    transition: .3s ease-out;
+    transform: rotate(0deg);
+  }
+
+  .sidebar .main-selection a.collapsed ~ img {
+    transform: rotate(180deg);
+  }
+
   .sidebar .sub-menu {
     padding-left: 1rem;
   }
