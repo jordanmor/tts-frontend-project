@@ -23,7 +23,7 @@
                         <a class="navbar-brand" href="#"><img src="img/logo.svg" alt="The Hartford Logo"></a>
     
                         <div>
-                            <button id="sidebarCollapse" class="navbar-toggler account-btn" type="button">
+                            <button id="sidebarCollapseAccount" class="navbar-toggler account-btn" type="button">
                                 <img src="img/user.svg" alt="Account Icon">
                                 <span class="toggler-text">Account</span>
                             </button>
@@ -65,10 +65,18 @@
         <nav id="sidebar" class="sidebar">
 
             <div class="sidebar-header">
-                <div id="dismiss" class="dismiss">
-                    <span class="dismiss-icon">&times</span>
+                <button id="sidebarAccount" class="navbar-toggler account-btn" type="button">
+                    <img src="img/user.svg" alt="Account Icon">
+                    <span class="toggler-text">Account</span>
+                </button>
+                <button  id="sidebarMenu" class="navbar-toggler menu-btn" type="button">
+                        <img src="img/hamburger.svg" alt="Menu Icon">
+                    <span class="toggler-text">Menu</span>
+                </button>
+                <button id="dismiss" class="navbar-toggler dismiss">
+                    <img src="img/cancel.svg" alt="Cancel Icon">
                     <span class="dismiss-text">Close</span>
-                </div>
+                </button>
             </div>
 
             <ul class="menu menu-one">
