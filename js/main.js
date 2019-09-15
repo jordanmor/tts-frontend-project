@@ -12,7 +12,7 @@ $(document).ready(function () {
         $('.overlay').removeClass('active');
     });
 
-    $('#sidebarCollapse').on('click', function () {
+    $('#sidebarCollapse, #sidebarCollapseMenu').on('click', function () {
         // open sidebar
         $('#sidebar').addClass('active');
         // move content to right
