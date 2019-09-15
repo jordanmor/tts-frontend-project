@@ -1,4 +1,126 @@
-﻿body {
-    background-color: #efefef;
-    font-family: 'Open Sans';
+﻿/*============-============-============-============
+                    CSS VARIABLES
+==============-============-============-==========*/
+
+:root {
+    --color-primary: #3a5a78;
+    --color-white: #fff;
+}
+
+/*============-============-============-============
+                    GLOBAL STYLES
+==============-============-============-==========*/
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+/*============-============-============-============
+                        NAVBAR
+==============-============-============-==========*/
+
+.navbar {
+    padding: .5rem 0;
+}
+
+.navbar-brand img {
+    width: 60%;
+}
+
+.navbar-toggler {
+    position: relative;
+    border: none;
+    padding: 0 4px 0 0;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-toggler span:first-child {
+    font-size: 1rem;
+}
+
+.toggler-text {
+    position: absolute;
+    font-size: .75rem;
+    top: 1.9rem;
+    left: -4px;
+}
+
+.bg-light {
+    background-color: var(--color-white)!important;
+}
+
+/*============-============-============-============
+                          MAIN
+==============-============-============-==========*/
+
+.jumbotron {
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.container-breadcrumb:before {
+    content: " ";
+    background-color: #b6d3e9;
+    display: block;
+    height: 8px;
+}
+
+.breadcrumb {
+    border-radius: 0;
+    background-color: transparent;
+    padding: .75rem 0;
+}
+
+/*============-============-============-============
+                      MEDIA QUERIES
+==============-============-============-==========*/
+
+@media (min-width: 768px) {
+
+    .navbar {
+        padding: .5rem 1rem;
+    }
+
+    .container-fluid {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .container-breadcrumb:before {
+        margin: 0 1rem;
+        margin-bottom: 15px;
+    }
+
+    .breadcrumb {
+        padding: .75rem 1rem;
+    }
 }
