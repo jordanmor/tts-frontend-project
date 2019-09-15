@@ -4,6 +4,7 @@
 
 :root {
     --color-primary: #3a5a78;
+    --color-secondary: #216bab;
     --color-white: #fff;
 }
 
@@ -26,6 +27,7 @@ body::-webkit-scrollbar {
 ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 p {
@@ -163,12 +165,21 @@ a[data-toggle="collapse"] {
   .sidebar .dismiss-text {
       position: absolute;
       left: 0;
-      top: 1.6rem;
+      top: 1.4rem;
       font-size: .85rem;
   }
   
-  .sidebar .menu {
+  .sidebar .menu-one {
     padding: 20px 6px 0;
+  }
+
+  .sidebar .menu-two {
+    background-color: #e4eff6; 
+    padding: 20px 6px;
+  }
+
+  .sidebar .menu-two .main-selection {
+    font-size: .85rem;
   }
 
   .sidebar ul li a {
@@ -184,6 +195,7 @@ a[data-toggle="collapse"] {
 
   .sidebar .sub-menu {
     padding-left: 1rem;
+    color: var(--color-secondary);
   }
     
   .dropdown-toggle::after {
