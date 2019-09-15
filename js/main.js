@@ -6,17 +6,17 @@ $(document).ready(function () {
     $('#dismiss, .overlay').on('click', function () {
         // hide sidebar
         $('#sidebar').removeClass('active');
+        // move content to center
+        $('#content').removeClass('active');
         // hide overlay
         $('.overlay').removeClass('active');
-        // allow page scrolling
-        $('body').removeClass('no-scroll');
     });
 
     $('#sidebarCollapse').on('click', function () {
-        // prevent page scrolling
-        $('body').addClass('no-scroll');
         // open sidebar
         $('#sidebar').addClass('active');
+        // move content to right
+        $('#content').addClass('active');
         // fade in the overlay
         $('.overlay').addClass('active');
         $('.collapse.in').toggleClass('in');
