@@ -5,6 +5,7 @@
 :root {
     --color-primary: #3a5a78;
     --color-secondary: #216bab;
+    --color-border: rgba(30,30,30,0.2);
     --color-white: #fff;
 }
 
@@ -162,16 +163,15 @@ a[data-toggle="collapse"] {
     left: 0;
 }
 
+/* ----- SIDEBAR HEADER ----- */
+
 .sidebar-header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: .35rem .75rem;
-
-}
-
-#sidebarAccount {
-    margin: 0;
+    padding: 1rem .75rem 1.8rem ;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .sidebar-header .account-btn {
@@ -202,31 +202,33 @@ a[data-toggle="collapse"] {
     font-size: .75rem;
 }
 
-.sidebar .menu-one {
-    padding: 20px 6px 0;
+/* ----- SIDEBAR MENU ----- */
+
+.sidebar-menu .menu-one {
+    padding: 0 6px;
 }
 
-.sidebar .menu-two {
+.sidebar-menu .menu-two {
     background-color: #e4eff6; 
     padding: 20px 6px;
 }
 
-.sidebar .menu-two .main-selection {
+.sidebar-menu .menu-two .main-selection {
     font-size: .85rem;
 }
 
-.sidebar ul li a {
+.sidebar-menu ul li a {
     display: block;
     padding: 10px;
     font-size: .8em;
 }
 
-.sidebar .main-selection {
+.sidebar-menu .main-selection {
     font-size: 1rem;
     position: relative;
 }
 
-.sidebar .sub-menu {
+.sidebar-menu .sub-menu {
     padding-left: 1rem;
     color: var(--color-secondary);
 }
@@ -241,20 +243,73 @@ a[data-toggle="collapse"] {
 
 /* ----- MENU ARROW ----- */
 
-.sidebar .main-selection img {
+.sidebar-menu .main-selection img {
     position: absolute;
     width: .8rem;
     right: 10px;
     bottom: 1.1rem;
 }
 
-.sidebar .main-selection img {
+.sidebar-menu .main-selection img {
     transition: .3s ease-out;
     transform: rotate(180deg);
 }
 
-.sidebar .main-selection.collapsed img {
+.sidebar-menu .main-selection.collapsed img {
     transform: rotate(0deg);
+}
+
+/* ----- SIDEBAR ACCOUNT ----- */
+
+.sidebar-account {
+    display: none;
+}
+
+.sidebar-account h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.sidebar-account p {
+    font-size: .85rem;
+    margin-bottom: .5rem;
+    color: #777;
+}
+
+.sidebar-account button {
+    width: 100%;
+    padding: .65rem 1rem;
+    background-color: var(--color-primary);
+    margin-bottom: .5rem;
+}
+
+.sidebar-account a {
+    display: block;
+    margin-bottom: .5rem;
+    font-size: .85rem;
+    color: var(--color-secondary);
+}
+
+.sidebar-account .border-bottom {
+    border-bottom: 1px solid var(--color-border); 
+    margin-bottom: 1rem;
+}
+
+.sidebar-account > div {
+    padding: 0rem 1.4rem;
+}
+
+.sidebar-account .footer {
+    background-color: #f2f2f2;
+    padding: 1rem 0;
+}
+
+.sidebar-account .footer > div {
+    padding: 0rem 1.4rem;
+}
+
+#sidebarAccountBtn {
+    margin: 0;
 }
 
 /* ----- OVERLAY ----- */

@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    const $sidebarMenu = $('#sidebarMenu');
+    const $sidebarMenuBtn = $('#sidebarMenuBtn');
+    const $sidebarAccount = $('#sidebarAccount');
+    const $sidebarAccountBtn = $('#sidebarAccountBtn');
+
     $("#sidebar").mCustomScrollbar({
         theme: "minimal"
     });
@@ -16,11 +21,15 @@ $(document).ready(function () {
     $('#sidebarCollapseAccount, #sidebarCollapseMenu').on('click', function (e) {
         // Display chosen menu in the sidebar
         if(e.currentTarget.id === 'sidebarCollapseAccount') {
-            $('#sidebarAccount').show();
-            $('#sidebarMenu').hide();
+            $sidebarAccountBtn.show();
+            $sidebarAccount.show();
+            $sidebarMenuBtn.hide();
+            $sidebarMenu.hide();
         } else if(e.currentTarget.id === 'sidebarCollapseMenu') {
-            $('#sidebarAccount').hide();
-            $('#sidebarMenu').show();
+            $sidebarAccountBtn.hide();
+            $sidebarAccount.hide();
+            $sidebarMenuBtn.show();
+            $sidebarMenu.show();
         }
         // open sidebar
         $('#sidebar').addClass('active');
@@ -33,13 +42,17 @@ $(document).ready(function () {
     });
 
     // Account and menu button in the sidebar
-    $('#sidebarAccount, #sidebarMenu').on('click', function (e) {
-        if(e.currentTarget.id === 'sidebarAccount') {
-            $('#sidebarMenu').show();
-            $('#sidebarAccount').hide();
-        } else if(e.currentTarget.id === 'sidebarMenu') {
-            $('#sidebarAccount').show();
-            $('#sidebarMenu').hide();
+    $('#sidebarAccountBtn, #sidebarMenuBtn').on('click', function (e) {
+        if(e.currentTarget.id === 'sidebarAccountBtn') {
+            $sidebarAccountBtn.hide();
+            $sidebarAccount.hide();
+            $sidebarMenuBtn.show();
+            $sidebarMenu.show();
+        } else if(e.currentTarget.id === 'sidebarMenuBtn') {
+            $sidebarAccountBtn.show();
+            $sidebarAccount.show();
+            $sidebarMenuBtn.hide();
+            $sidebarMenu.hide();
         }
     });
 
