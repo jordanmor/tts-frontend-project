@@ -4,6 +4,8 @@
 
 :root {
     --color-primary: #3a5a78;
+    --color-secondary: #216bab;
+    --color-border: rgba(30,30,30,0.2);
     --color-white: #fff;
 }
 
@@ -13,7 +15,10 @@
 
 body {
     font-family: Arial, sans-serif;
-    overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 .wrapper {
@@ -22,6 +27,8 @@ body {
 
 ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 p {
@@ -39,12 +46,16 @@ a:focus {
     transition: all 0.3s;
 }
 
+a[data-toggle="collapse"] {
+    position: relative;
+  }
+
 /*============-============-============-============
                         NAVBAR
 ==============-============-============-==========*/
 
 .navbar {
-    padding: .5rem 0;
+    padding: .5rem .15rem 0;
 }
 
 .navbar-brand img {
@@ -55,6 +66,15 @@ a:focus {
     position: relative;
     border: none;
     padding: 0 4px 0 0;
+    color: var(--color-primary);
+}
+
+.account-btn {
+    margin-right: 1.4rem;
+}
+
+.navbar-toggler img {
+    width: 1.3rem;
 }
 
 .navbar-toggler,
@@ -62,15 +82,15 @@ a:focus {
     outline: none;
 }
 
-.navbar-toggler span:first-child {
-    font-size: 1rem;
-}
-
 .toggler-text {
     position: absolute;
     font-size: .75rem;
     top: 1.9rem;
     left: -4px;
+}
+
+.account-btn .toggler-text {
+    left: -14px;
 }
 
 .bg-light {
@@ -98,6 +118,220 @@ a:focus {
     border-radius: 0;
     background-color: transparent;
     padding: .75rem 0;
+}
+  
+/*============-============-============-============
+                    CONTENT
+==============-============-============-==========*/
+  
+.content {
+    width: 100%;
+    /* padding: 20px; */
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.3s;
+}
+
+.content.active {
+    position: fixed;
+    right: -280px;
+}
+
+/*============-============-============-============
+                      SIDEBAR
+==============-============-============-==========*/
+
+.sidebar {
+    width: 280px;
+    position: fixed;
+    top: 0;
+    left: -280px;
+    height: 100vh;
+    /* top layer */
+    z-index: 999;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    transition: all 0.3s;
+    overflow-y: scroll;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+  
+.sidebar.active {
+    left: 0;
+}
+
+/* ----- SIDEBAR HEADER ----- */
+
+.sidebar-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem .75rem 1.8rem ;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.sidebar-header .account-btn {
+    display: none;
+}
+  
+.sidebar .dismiss {
+    position: relative;
+    margin-left: 1.4rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sidebar .dismiss:hover {
+    background: var(--color-white);
+    color: #7386D5;
+}
+
+.sidebar .dismiss img {
+    width: 1.1rem;
+}
+
+.sidebar .dismiss-text {
+    position: absolute;
+    left: -8px;
+    top: 1.85rem;
+    font-size: .75rem;
+}
+
+/* ----- SIDEBAR MENU ----- */
+
+.sidebar-menu .menu-one {
+    padding: 0 6px;
+}
+
+.sidebar-menu .menu-two {
+    background-color: #e4eff6; 
+    padding: 20px 6px;
+}
+
+.sidebar-menu .menu-two .main-selection {
+    font-size: .85rem;
+}
+
+.sidebar-menu ul li a {
+    display: block;
+    padding: 10px;
+    font-size: .8em;
+}
+
+.sidebar-menu .main-selection {
+    font-size: 1rem;
+    position: relative;
+}
+
+.sidebar-menu .sub-menu {
+    padding-left: 1rem;
+    color: var(--color-secondary);
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+/* ----- MENU ARROW ----- */
+
+.sidebar-menu .main-selection img {
+    position: absolute;
+    width: .8rem;
+    right: 10px;
+    bottom: 1.1rem;
+}
+
+.sidebar-menu .main-selection img {
+    transition: .3s ease-out;
+    transform: rotate(180deg);
+}
+
+.sidebar-menu .main-selection.collapsed img {
+    transform: rotate(0deg);
+}
+
+/* ----- SIDEBAR ACCOUNT ----- */
+
+.sidebar-account {
+    display: none;
+}
+
+.sidebar-account h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.sidebar-account p {
+    font-size: .85rem;
+    margin-bottom: .5rem;
+    color: #777;
+}
+
+.sidebar-account button {
+    width: 100%;
+    padding: .65rem 1rem;
+    background-color: var(--color-primary);
+    margin-bottom: .5rem;
+}
+
+.sidebar-account a {
+    display: block;
+    margin-bottom: .5rem;
+    font-size: .85rem;
+    color: var(--color-secondary);
+}
+
+.sidebar-account .border-bottom {
+    border-bottom: 1px solid var(--color-border); 
+    margin-bottom: 1rem;
+}
+
+.sidebar-account > div {
+    padding: 0rem 1.4rem;
+}
+
+.sidebar-account .footer {
+    background-color: #f2f2f2;
+    padding: 1rem 0;
+}
+
+.sidebar-account .footer > div {
+    padding: 0rem 1.4rem;
+}
+
+#sidebarAccountBtn {
+    margin: 0;
+}
+
+/* ----- OVERLAY ----- */
+  
+.overlay {
+    display: none;
+    position: fixed;
+    /* full screen */
+    width: 100vw;
+    height: 100vh;
+    /* transparent black */
+    background: rgba(0, 0, 0, 0.7);
+    /* middle layer, i.e. appears below the sidebar */
+    z-index: 998;
+    opacity: 0;
+    /* animate the transition */
+    transition: all 0.5s ease-in-out;
+}
+  /* display .overlay when it has the .active class */
+.overlay.active {
+    display: block;
+    opacity: 1;
 }
 
 /*============-============-============-============

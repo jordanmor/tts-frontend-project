@@ -7,6 +7,8 @@
         <title>TTS Front End Project</title>
         <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Custom Scrollbar CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
         <link rel="stylesheet" href="css/main.css" />
     </head>
     <body>
@@ -14,16 +16,22 @@
         <div class="wrapper">
 
             <!-- Page Content  -->
-            <div>
+            <div id="content" class="content">
 
                 <header class="container-fluid">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
                         <a class="navbar-brand" href="#"><img src="img/logo.svg" alt="The Hartford Logo"></a>
     
-                        <button  id="sidebarCollapse" class="navbar-toggler" type="button">
-                            <span class="navbar-toggler-icon"></span>
-                            <span class="toggler-text">Menu</span>
-                        </button>
+                        <div>
+                            <button id="sidebarCollapseAccount" class="navbar-toggler account-btn" type="button">
+                                <img src="img/user.svg" alt="Account Icon">
+                                <span class="toggler-text">Account</span>
+                            </button>
+                            <button  id="sidebarCollapseMenu" class="navbar-toggler menu-btn" type="button">
+                                    <img src="img/hamburger.svg" alt="Menu Icon">
+                                <span class="toggler-text">Menu</span>
+                            </button>
+                        </div>
                     </nav>
                 </header>
 
@@ -53,9 +61,166 @@
             </div>
         </div> <!-- End of Page Content  -->
 
+        <!-- Sidebar  -->
+        <nav id="sidebar" class="sidebar">
+
+            <div class="sidebar-header">
+                <button id="sidebarAccountBtn" class="navbar-toggler account-btn" type="button">
+                    <img src="img/user.svg" alt="Account Icon">
+                    <span class="toggler-text">Account</span>
+                </button>
+                <button  id="sidebarMenuBtn" class="navbar-toggler menu-btn" type="button">
+                    <img src="img/hamburger.svg" alt="Menu Icon">
+                    <span class="toggler-text">Menu</span>
+                </button>
+                <button id="dismiss" class="navbar-toggler dismiss">
+                    <img src="img/cancel.svg" alt="Cancel Icon">
+                    <span class="dismiss-text">Close</span>
+                </button>
+            </div>
+
+            <div id="sidebarMenu" class="sidebar-menu">
+
+                <ul class="menu-one">
+
+                    <li>
+                        <a class="main-selection collapsed" href="#autoSubmenu" data-toggle="collapse" aria-expanded="false">
+                            Auto
+                            <img src="img/down-arrow.svg" alt="Down arrow">
+                        </a>
+                        <ul class="collapse sub-menu" id="autoSubmenu">
+                            <li><a href="#">Car Insurance</a></li>
+                            <li><a href="#">Classic Car Insurance</a></li>
+                            <li><a href="#">All Vehicles</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a class="main-selection collapsed" href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+                            Home
+                            <img src="img/down-arrow.svg" alt="Down arrow">
+                        </a>
+                        <ul class="collapse sub-menu" id="homeSubmenu">
+                            <li><a href="#">Homeowners Insurance</a></li>
+                            <li><a href="#">Renters Insurance</a></li>
+                            <li><a href="#">Condo Insurance</a></li>
+                            <li><a href="#">Flood Insurance</a></li>
+                            <li><a href="#">Umbrella Insurance</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a class="main-selection collapsed" href="#businessSubmenu" data-toggle="collapse" aria-expanded="false">
+                            Business
+                            <img src="img/down-arrow.svg" alt="Down arrow">
+                        </a>
+                        <ul class="collapse sub-menu" id="businessSubmenu">
+                            <li><a href="#">Business Insurance</a></li>
+                            <li><a href="#">Small Business Insurance</a></li>
+                            <li><a href="#">General Liability Insurance</a></li>
+                            <li><a href="#">Worker's Compensation Insurance</a></li>
+                            <li><a href="#">All Business Insurance</a></li>
+                            <li><a href="#">All Industries</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a class="main-selection collapsed" href="#employeeBenefitsSubmenu" data-toggle="collapse" aria-expanded="false">
+                            Employee Benefits
+                            <img src="img/down-arrow.svg" alt="Down arrow">
+                        </a>
+                        <ul class="collapse sub-menu" id="employeeBenefitsSubmenu">
+                            <li><a href="#">Employee Benefits</a></li>
+                            <li><a href="#">Voluntary Benefits</a></li>
+                            <li><a href="#">Absence Management</a></li>
+                            <li><a href="#">For Employees</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a class="main-selection collapsed" href="#aboutSubmenu" data-toggle="collapse" aria-expanded="false">
+                            About Us
+                            <img src="img/down-arrow.svg" alt="Down arrow">
+                        </a>
+                        <ul class="collapse sub-menu" id="aboutSubmenu">
+                            <li><a href="#">About The Hartford</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">Newsroom</a></li>
+                            <li><a href="#">Corporate Sustainability</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <ul class="menu-two">
+                    <li>
+                        <a class="main-selection collapsed" href="#agentSubmenu" data-toggle="collapse" aria-expanded="false">
+                            Find An Agent
+                            <img src="img/down-arrow.svg" alt="Down arrow">
+                        </a>
+                        <ul class="collapse sub-menu" id="agentSubmenu">
+                            <li><a href="#">About The Hartford</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">Newsroom</a></li>
+                            <li><a href="#">Corporate Sustainability</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Claims</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Agents & Producers</a></li>
+                </ul>
+            </div>
+
+            <div id="sidebarAccount" class="sidebar-account">
+                <div class="border-bottom">
+                    <h3>I'm an Auto or Home Customer</h3>
+                    <p>Manage my personal policy, bills and claims.</p>
+                    <button class="btn btn-primary">Log In</button>
+                    <a href="#">Register</a>
+                    <a href="#">Express Pay (no login required)</a>
+                    <a href="#">Auto ID Cards</a>
+                </div>
+
+                <div class="border-bottom">
+                    <h3>I'm a Business Customer</h3>
+                    <p>Manage my business policy, bills and claims, get certificates and submit audits.</p>
+                    <button class="btn btn-primary">Log In</button>
+                    <a href="#">Register</a>
+                    <a href="#">Express Pay (no login required)</a>
+                </div>
+
+                <div>
+                    <h3>I'm an Employee Checking on My Benefits</h3>
+                    <p>Submit claims, check status of disability or leave, and see payments.</p>
+                    <button class="btn btn-primary">Log In</button>
+                    <a href="#">Register</a>
+                </div>
+
+                <div class="footer container-fluid">
+                    <div>
+                        <h3>Investments</h3>
+                        <a href="#">College Savings Plans</a>
+                        <a href="#">Mutual Funds</a>
+                        <a href="#">Safe Haven Accounts</a>
+                        <h3>Partners</h3>
+                        <a href="#">Electronic Business Center (EBC)</a>
+                        <a href="#">Bond 1-Step Surety</a>
+                        <a href="#">Group Benefits Producer View</a>
+                        <a href="#">RMIS - TREO</a>
+                    </div>
+                </div>
+            </div>
+
+        </nav><!-- End of Sidebar  -->
+
+        <!-- Overlay  -->
+        <div class="overlay"></div>
+
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
