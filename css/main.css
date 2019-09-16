@@ -7,6 +7,8 @@
     --color-secondary: #216bab;
     --color-border: rgba(30,30,30,0.2);
     --color-white: #fff;
+
+    --font-size: 1rem;
 }
 
 /*============-============-============-============
@@ -25,6 +27,10 @@ body::-webkit-scrollbar {
     display: block;
 }
 
+h1 {
+    color: var(--color-primary);
+}
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -35,7 +41,10 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+}
+
+img {
+    width: 100%;
 }
 
 a,
@@ -107,6 +116,13 @@ a[data-toggle="collapse"] {
     background-color: transparent;
 }
 
+.jumbotron h1 {
+    font-size: calc(var(--font-size) * 1.7);
+    font-weight: bold;
+    padding: 0 0 1rem;
+    margin: 0;
+}
+
 .container-breadcrumb:before {
     content: " ";
     background-color: #b6d3e9;
@@ -115,11 +131,36 @@ a[data-toggle="collapse"] {
 }
 
 .breadcrumb {
+    color: var(--color-secondary);
     border-radius: 0;
     background-color: transparent;
-    padding: .75rem 0;
+    font-size: calc(var(--font-size) * 1.1);
+    padding: .8rem 0 .5rem;
+    margin: 0;
 }
-  
+
+.hero-text {
+    padding: 1.4rem;
+    padding-left: 0;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.hero-text > div {
+    padding-left: 2rem;
+    border-left: 7px solid #f26722;
+}
+
+.hero-text h2 {
+    font-weight: bold;
+    font-size: calc(var(--font-size) * 1.4);
+}
+
+.hero-text p {
+    font-size: var(--font-size);
+    margin: 0;
+}
+
 /*============-============-============-============
                     CONTENT
 ==============-============-============-==========*/
@@ -337,6 +378,17 @@ a[data-toggle="collapse"] {
 /*============-============-============-============
                       MEDIA QUERIES
 ==============-============-============-==========*/
+
+/* Mobile Phones */
+@media (max-width: 475px) {
+    :root {
+        --font-size: .95rem;
+    }
+
+    .hero-text > div {
+        padding-left: 1.4rem;
+    }
+}
 
 @media (min-width: 768px) {
 
