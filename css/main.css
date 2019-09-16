@@ -5,8 +5,13 @@
 :root {
     --color-primary: #3a5a78;
     --color-secondary: #216bab;
-    --color-border: rgba(30,30,30,0.2);
+    --color-primary-bg: #e4eff6;
+    --color-primary-border: #b6d3e9;
+    --color-primary-border-light: #e4eff6;
+    --color-secondary-border: rgba(30,30,30,0.2);
     --color-white: #fff;
+
+    --font-size: 1rem;
 }
 
 /*============-============-============-============
@@ -25,6 +30,10 @@ body::-webkit-scrollbar {
     display: block;
 }
 
+h1 {
+    color: var(--color-primary);
+}
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -35,7 +44,10 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+}
+
+img {
+    width: 100%;
 }
 
 a,
@@ -107,6 +119,13 @@ a[data-toggle="collapse"] {
     background-color: transparent;
 }
 
+.jumbotron h1 {
+    font-size: calc(var(--font-size) * 1.7);
+    font-weight: bold;
+    padding: 0 0 1rem;
+    margin: 0;
+}
+
 .container-breadcrumb:before {
     content: " ";
     background-color: #b6d3e9;
@@ -115,11 +134,36 @@ a[data-toggle="collapse"] {
 }
 
 .breadcrumb {
+    color: var(--color-secondary);
     border-radius: 0;
     background-color: transparent;
-    padding: .75rem 0;
+    font-size: calc(var(--font-size) * 1.1);
+    padding: .8rem 0 .5rem;
+    margin: 0;
 }
-  
+
+.hero-text {
+    padding: 1.4rem;
+    padding-left: 0;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.hero-text > div {
+    padding-left: 2rem;
+    border-left: 7px solid #f26722;
+}
+
+.hero-text h2 {
+    font-weight: bold;
+    font-size: calc(var(--font-size) * 1.4);
+}
+
+.hero-text p {
+    font-size: var(--font-size);
+    margin: 0;
+}
+
 /*============-============-============-============
                     CONTENT
 ==============-============-============-==========*/
@@ -138,6 +182,112 @@ a[data-toggle="collapse"] {
 .content.active {
     position: fixed;
     right: -280px;
+}
+
+/* ----- MAIN----- */
+
+main section {
+    margin-bottom: 3rem;
+}
+
+main h2 {
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: calc(var(--font-size) * 1.4);
+}
+
+main p {
+    color: #555;
+    font-size: calc(var(--font-size) * 1.2);
+}
+
+main a {
+    color: var(--color-secondary);
+    font-size: calc(var(--font-size) * 1.2);
+}
+
+main .row {
+    padding: 0 15px;
+}
+
+main .photo-container {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+main .photo-container:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    content: ' ';
+    display: block;
+    width: 70%;
+    height: 70%;
+    background-color: var(--color-primary-border);
+}
+
+main .inner-container {
+    position: relative;
+    z-index: 999;
+    padding: .5rem 0 0 .5rem;
+    background-color: var(--color-white);
+}
+
+main .photo-text {
+    padding-left: 2rem;
+    border-left: 8px solid var(--color-primary-border-light); 
+}
+
+main .quote {
+    background-color: var(--color-primary-bg);
+    margin-bottom: 2rem;
+}
+
+main .blockquote {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+main .blockquote p {
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: calc(var(--font-size) * 1.6);
+}
+
+main .blockquote footer {
+    color: var(--color-primary);
+    font-size: calc(var(--font-size) * 1.3);
+}
+
+main .thumbnail {
+    width: 16rem;
+    margin-bottom: 1rem;
+}
+
+main .explore {
+    text-align: center;
+}
+
+main .explore p {
+    font-size: calc(var(--font-size) * 1.3);
+    margin-bottom: 0;
+}
+
+main .more {
+    background-color: var(--color-primary-bg);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+main .more h2 {
+    font-size: calc(var(--font-size) * 1.5);
+    margin-bottom: 1.2rem;
+}
+
+main .more a {
+    display: block;
 }
 
 /*============-============-============-============
@@ -171,7 +321,7 @@ a[data-toggle="collapse"] {
     align-items: center;
     padding: 1rem .75rem 1.8rem ;
     margin-bottom: 1rem;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-secondary-border);
 }
 
 .sidebar-header .account-btn {
@@ -291,7 +441,7 @@ a[data-toggle="collapse"] {
 }
 
 .sidebar-account .border-bottom {
-    border-bottom: 1px solid var(--color-border); 
+    border-bottom: 1px solid var(--color-secondary-border); 
     margin-bottom: 1rem;
 }
 
@@ -338,6 +488,17 @@ a[data-toggle="collapse"] {
                       MEDIA QUERIES
 ==============-============-============-==========*/
 
+/* Mobile Phones */
+@media (max-width: 475px) {
+    :root {
+        --font-size: .95rem;
+    }
+
+    .hero-text > div {
+        padding-left: 1.4rem;
+    }
+}
+
 @media (min-width: 768px) {
 
     .navbar {
@@ -356,5 +517,9 @@ a[data-toggle="collapse"] {
 
     .breadcrumb {
         padding: .75rem 1rem;
+    }
+
+    main .more img {
+        width: 100%;
     }
 }
