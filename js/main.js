@@ -21,14 +21,14 @@ $(document).ready(function () {
     $('#sidebarCollapseAccount, #sidebarCollapseMenu').on('click', function (e) {
         // Display chosen menu in the sidebar
         if(e.currentTarget.id === 'sidebarCollapseAccount') {
-            $sidebarAccountBtn.show();
+            $sidebarAccountBtn.hide();
             $sidebarAccount.show();
-            $sidebarMenuBtn.hide();
+            $sidebarMenuBtn.show();
             $sidebarMenu.hide();
         } else if(e.currentTarget.id === 'sidebarCollapseMenu') {
-            $sidebarAccountBtn.hide();
+            $sidebarAccountBtn.show();
             $sidebarAccount.hide();
-            $sidebarMenuBtn.show();
+            $sidebarMenuBtn.hide();
             $sidebarMenu.show();
         }
         // open sidebar
@@ -45,14 +45,14 @@ $(document).ready(function () {
     $('#sidebarAccountBtn, #sidebarMenuBtn').on('click', function (e) {
         if(e.currentTarget.id === 'sidebarAccountBtn') {
             $sidebarAccountBtn.hide();
-            $sidebarAccount.hide();
+            $sidebarAccount.show();
             $sidebarMenuBtn.show();
-            $sidebarMenu.show();
+            $sidebarMenu.hide();
         } else if(e.currentTarget.id === 'sidebarMenuBtn') {
             $sidebarAccountBtn.show();
-            $sidebarAccount.show();
+            $sidebarAccount.hide();
             $sidebarMenuBtn.hide();
-            $sidebarMenu.hide();
+            $sidebarMenu.show();
         }
     });
 
