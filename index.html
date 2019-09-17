@@ -20,6 +20,7 @@
 
                 <header class="container-fluid">
                 
+                    <!-- Top Nav in Header for lg+ screens -->
                     <nav class="main-menu top-menu navbar navbar-expand-lg">
                         <div class="collapse navbar-collapse" id="navbarToggler01">
                             <ul class="menu-two navbar-nav ml-auto">
@@ -44,13 +45,97 @@
                                 <li class="my-account nav-item dropdown">
                                     <a class="nav-link" href="#">MY ACCOUNT</a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Insurance</a>
+                                        <div>
+                                            <div class="dropdown-item">
+                                                <div class="dropdown-inner-left">
+                                                    <img src="img/garage.svg" alt="A car parked in a garage">
+                                                    <div>
+                                                        <h3>I'm an Auto or Home Customer</h3>
+                                                        <p>Manage my personal policy, bills and claims.</p>
+                                                        <a href="#">Express Pay (no login required)</a>
+                                                        <a href="#">Auto ID Cards</a>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-inner-right">
+                                                    <button class="btn btn-primary">Log In</button>
+                                                    <a href="#">Register</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="dropdown-divider"></div>
+
+                                            <div class="dropdown-item">
+                                                <div class="dropdown-inner-left">
+                                                    <img src="img/business.svg" alt="An icon of a storefront business">
+                                                    <div>
+                                                        <h3>I'm a Business Customer</h3>
+                                                        <p>Manage my business policy, bills and claims, get certificates and submit audits.</p>
+                                                        <a href="#">Express Pay (no login required)</a>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-inner-right">
+                                                    <button class="btn btn-primary">Log In</button>
+                                                    <a href="#">Register</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="dropdown-divider"></div>
+
+                                            <div class="dropdown-item">
+                                                <div class="dropdown-inner-left">
+                                                    <img src="img/badge.svg" alt="An icon of an employee's badge">
+                                                    <div>
+                                                        <h3>I'm an Employee Checking on My Benefits</h3>
+                                                        <p>Submit claims, check status of disability or leave, and see payments.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-inner-right">
+                                                    <button class="btn btn-primary">Log In</button>
+                                                    <a href="#">Register</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="dropdown-divider"></div>
+
+                                            <div class="dropdown-item">
+                                                <div class="dropdown-inner-left">
+                                                    <img src="img/collaboration.svg" alt="An icon representing collaboration in the workplace">
+                                                    <div>
+                                                        <h3>I'm an Employer or Plan Administrator</h3>
+                                                        <p>Manage benefits programs and pay bills.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-inner-right">
+                                                    <button class="btn btn-primary">Log In</button>
+                                                    <a href="#">Register</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="footer dropdown-item">
+                                            <ul>
+                                                <h3>Investments</h3>
+                                                <a href="#">College Savings Plans</a>
+                                                <a href="#">Mutual Funds</a>
+                                                <a href="#">Safe Haven Accounts</a>
+                                            </ul>
+                                            <ul>
+                                                <h3>Partners</h3>
+                                                <a href="#">Electronic Business Center (EBC)</a>
+                                                <a href="#">Bond 1-Step Surety</a>
+                                                <a href="#">Group Benefits Producer View</a>
+                                                <a href="#">RMIS - TREO</a>
+                                            </ul>
+                                        </div>
+
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </nav>
 
+                    <!-- Nav buttons in Header for smaller screens -->
                     <nav class="main-menu navbar navbar-expand-lg">
                         <a class="navbar-brand" href="#"><img src="img/logo.svg" alt="The Hartford Logo"></a>
     
@@ -65,6 +150,7 @@
                             </button>
                         </div>
 
+                        <!-- Bottom Nav in Header for lg+ screens -->
                         <div class="collapse navbar-collapse" id="navbarToggler02">
                             <ul class="menu-one navbar-nav mr-auto mt-2 mt-lg-0">
 
@@ -135,6 +221,7 @@
                                 <input class="form-control" type="search" placeholder="Help me find." aria-label="Search">
                             </form>
                         </div>
+
                     </nav>
                 </header>
 
@@ -483,9 +570,16 @@
                     <a href="#">Express Pay (no login required)</a>
                 </div>
 
-                <div>
+                <div class="border-bottom">
                     <h3>I'm an Employee Checking on My Benefits</h3>
                     <p>Submit claims, check status of disability or leave, and see payments.</p>
+                    <button class="btn btn-primary">Log In</button>
+                    <a href="#">Register</a>
+                </div>
+
+                <div>
+                    <h3>I'm an Employee Checking or Plan Administrator</h3>
+                    <p>Manage benefits programs and pay bills.</p>
                     <button class="btn btn-primary">Log In</button>
                     <a href="#">Register</a>
                 </div>

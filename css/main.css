@@ -120,6 +120,10 @@ a[data-toggle="collapse"] {
     background-color: var(--color-white)!important;
 }
 
+/*============-============
+          TOP MENU
+==============-==========*/
+
 .top-menu .menu-two {
     background-color: var(--color-primary-bg);
 }
@@ -143,9 +147,82 @@ a[data-toggle="collapse"] {
 }
 
 .top-menu .my-account .dropdown-menu {
-    left: -25px;
+    width: 680px;
+    left: -550px;
     border-radius: 0;
 }
+
+.top-menu .my-account .dropdown-menu > div:first-child {
+    padding: .5rem 1.5rem;
+}
+
+.my-account .dropdown-menu h3 {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: .25rem 0;
+}
+
+.my-account .dropdown-menu p {
+    font-size: 1rem;
+    color: #656565;
+    margin: .25rem 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.my-account button {
+    width: 100%;
+    padding: .35rem 2.4rem;
+    background-color: var(--color-primary);
+    margin-bottom: .5rem;
+    border-radius: 0;
+    border: none;
+    white-space: nowrap;
+}
+
+.top-menu .my-account .dropdown-item {
+    display: flex;
+    justify-content: space-between;
+    white-space: normal;
+    padding: .75rem 0;
+}
+
+.my-account .dropdown-inner-left {
+    display: flex;
+}
+
+.my-account .dropdown-inner-left > div,
+.my-account .dropdown-inner-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.my-account .dropdown-inner-left img {
+    align-self: flex-start;
+    width: 50px;
+    margin-right: 1.4rem;
+}
+
+.my-account .dropdown-inner-right {
+    text-align: center;
+    margin-left: 1rem;
+}
+
+.my-account .footer.dropdown-item {
+    padding: 1.6rem;
+    background-color: var(--color-secondary-bg);
+}
+
+.my-account .footer ul {
+    display: flex;
+    flex-direction: column;
+}
+
+/*============-============
+          MAIN MENU
+==============-==========*/
 
 .main-menu .menu-one {
     display: flex;
