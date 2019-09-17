@@ -604,6 +604,16 @@ main .more h2 {
 
 main .more a {
     display: block;
+    position: relative;
+}
+
+main .more .pdf::before {
+    content: url('/img/pdf.svg');
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    left: -5px;
 }
 
 /*============-============-============
