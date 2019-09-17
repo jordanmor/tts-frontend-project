@@ -73,8 +73,16 @@ a[data-toggle="collapse"] {
     padding: .5rem .15rem 0;
 }
 
+.navbar-brand {
+    position: relative;
+    display: block;
+    width: 75px;
+    height: 75px;
+}
+
 .navbar-brand img {
-    width: 60%;
+    position: absolute;
+    width: 60px;
 }
 
 .navbar-toggler {
@@ -246,6 +254,10 @@ a[data-toggle="collapse"] {
     font-size: calc(var(--font-size) * 1.1);
     padding: .8rem 0 .5rem;
     margin: 0;
+}
+
+.hero-container {
+    position: relative;
 }
 
 .hero-text {
@@ -697,6 +709,10 @@ footer .copyright {
         padding: .5rem 1rem;
     }
 
+    .navbar-brand img {
+        bottom: 5px;
+    }
+
     .container-fluid {
         padding-right: 30px;
         padding-left: 30px;
@@ -711,8 +727,28 @@ footer .copyright {
         padding: .75rem 1rem;
     }
 
+    .jumbotron {
+        margin-bottom: -2rem;
+    }
+
     .jumbotron h1 {
         padding-left: 15px;
+    }
+
+    .hero-text {
+        position: relative;
+        width: 75%;
+        margin-left: auto;
+        top: -100px;
+        padding: 2rem 4rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
     }
 
     main .more img {
@@ -723,5 +759,23 @@ footer .copyright {
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-nav .nav-link {
         padding: 0;
+    }
+
+    .navbar-brand img {
+        width: 100px;
+    }
+}
+
+@media (min-width: 1680px) {
+    .hero-text {
+        width: 60%;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1.4rem;
     }
 }
