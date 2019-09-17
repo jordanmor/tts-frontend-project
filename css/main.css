@@ -354,12 +354,14 @@ main .blockquote p {
     color: var(--color-primary);
     font-weight: bold;
     font-size: calc(var(--font-size) * 1.6);
+    margin-bottom: 2rem;
 }
 
 main .blockquote-footer {
     color: var(--color-primary);
     background-color: var(--color-primary-bg);
     font-size: calc(var(--font-size) * 1.3);
+    padding: 0;
 }
 
 main .thumbnail {
@@ -754,6 +756,16 @@ footer .copyright {
     main .more img {
         width: 100%;
     }
+
+    main .photo-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    main .blockquote {
+        padding: 3rem 10rem;
+    }
 }
 
 @media (min-width: 992px) {
@@ -763,6 +775,10 @@ footer .copyright {
 
     .navbar-brand img {
         width: 100px;
+    }
+
+    footer nav {
+        padding: 0 6rem;
     }
 }
 
