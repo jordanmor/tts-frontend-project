@@ -18,12 +18,12 @@
             <!-- Page Content  -->
             <div id="content" class="content">
 
-                <header class="container-fluid">
+                <header class="content-header container-fluid">
                 
-                    <!-- Top Nav in Header for lg+ screens -->
-                    <nav class="main-menu top-menu navbar navbar-expand-lg">
+                    <!-- Secondary nav at the top of the Header for lg+ screens -->
+                    <nav class="secondary-menu navbar navbar-expand-lg">
                         <div class="collapse navbar-collapse" id="navbarToggler01">
-                            <ul class="menu-two navbar-nav ml-auto">
+                            <ul class="navbar-nav ml-auto">
 
                                 <li class="nav-item dropdown">
                                     <a class="nav-link" href="#">Find an Agent</a>
@@ -133,10 +133,10 @@
                                 </li>
                             </ul>
                         </div>
-                    </nav>
+                    </nav><!-- End of Secondary Nav -->
 
                     <!-- Nav buttons in Header for smaller screens -->
-                    <nav class="main-menu navbar navbar-expand-lg">
+                    <nav class="primary-menu navbar navbar-expand-lg">
                         <a class="navbar-brand" href="#"><img src="img/logo.svg" alt="The Hartford Logo"></a>
     
                         <div>
@@ -150,9 +150,9 @@
                             </button>
                         </div>
 
-                        <!-- Bottom Nav in Header for lg+ screens -->
+                        <!-- Primary nav in the Header for lg+ screens -->
                         <div class="collapse navbar-collapse" id="navbarToggler02">
-                            <ul class="menu-one navbar-nav mr-auto mt-2 mt-lg-0">
+                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
                                 <li class="nav-item dropdown">
                                     <a class="nav-link" href="#">
@@ -219,10 +219,12 @@
                             </ul>
                             <form class="search form-inline my-2 my-lg-0">
                                 <input class="form-control" type="search" placeholder="Help me find." aria-label="Search">
+                                <button type="submit"><img src="img/search.svg" alt="Search icon"></button>
                             </form>
                         </div>
 
-                    </nav>
+                    </nav><!-- End of Primary Nav -->
+                    
                 </header>
 
                 <section class="jumbotron">
@@ -459,9 +461,16 @@
                 </button>
             </div>
 
-            <div id="sidebarMenu" class="sidebar-menu">
+            <div id="sidebarMenu" class="sidebar-primary-menu">
 
                 <ul class="menu-one">
+
+                    <li>
+                        <form class="search form-inline my-2 my-lg-0">
+                            <input class="form-control" type="search" placeholder="Help me find..." aria-label="Search">
+                            <button type="submit"><img src="img/search.svg" alt="Search icon"></button>
+                        </form>
+                    </li>
 
                     <li>
                         <a class="main-selection collapsed" href="#autoSubmenu" data-toggle="collapse" aria-expanded="false">
@@ -546,13 +555,13 @@
                         </ul>
                     </li>
 
-                    <li><a href="#">Claims</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Agents & Producers</a></li>
+                    <li><a class="main-selection underline" href="#">Claims</a></li>
+                    <li><a class="main-selection underline" href="#">Contact Us</a></li>
+                    <li><a class="main-selection underline" href="#">Agents & Producers</a></li>
                 </ul>
             </div>
 
-            <div id="sidebarAccount" class="sidebar-account">
+            <div id="sidebarAccount" class="sidebar-account-menu">
                 <div class="border-bottom">
                     <h3>I'm an Auto or Home Customer</h3>
                     <p>Manage my personal policy, bills and claims.</p>
