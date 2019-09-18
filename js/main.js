@@ -56,4 +56,22 @@ $(document).ready(function () {
         }
     });
 
+    /* Since a YouTube video doesn't stop automatically when you close the modal window, 
+       the code below will prevent the video from still playing in the background 
+       after the modal is closed. */
+
+    /* Store the YouTube iframe src attribute value in a variable */
+    let youtubeUrl = $("#youtubeVideo01").attr('src');
+    
+    /* Assign an empty url value to the iframe src attribute when
+    modal hidden, which stops the video play */
+    $("#videoModal").on('hide.bs.modal', function(){
+        $("#youtubeVideo01").attr('src', '');
+    });
+    
+    /* Assign the initially stored url back to the iframe src
+    attribute when modal is displayed again */
+    $("#videoModal").on('show.bs.modal', function(){
+        $("#youtubeVideo01").attr('src', youtubeUrl);
+    });
 });
