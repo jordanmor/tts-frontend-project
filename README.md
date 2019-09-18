@@ -17,6 +17,8 @@ A thorough recreation of the The Hartford's About Me page with a functional side
 - Add a link and a downloadable PDF fact sheet about The Hartford as it is present on the The Hartford's About Me page
 - Showcase an attention to detail with this project.
 
+**Web page tested in the following browsers:** Chrome, Safari and Firefox 
+
 **Project Assigned:** 09/13/2019  
 **Project Due:** 09/18/2019   
 **Project Completed:** 09/18/2019  
