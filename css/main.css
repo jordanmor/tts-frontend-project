@@ -34,9 +34,7 @@ body::-webkit-scrollbar {
     display: block;
 }
 
-h1,
-h2,
-h3 {
+h1,h2,h3,h4,h5 {
     color: var(--color-primary);
     font-weight: bold;
 }
@@ -544,6 +542,24 @@ main .inner-container {
     background-color: var(--color-white);
 }
 
+main .inner-container .video {
+    position: relative;
+    cursor: pointer;
+}
+
+main .inner-container .video::before {
+    content: url('../img/play-button.svg');
+    position: absolute;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    /*Center absolute element*/
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -50px;
+}
+
 main .photo-text > div{
     padding-left: 2rem;
     border-left: 8px solid var(--color-primary-border-light); 
@@ -942,6 +958,23 @@ footer .copyright {
 .overlay.active {
     display: block;
     opacity: 1;
+}
+
+/*============-============-============-============
+                         MODAL
+==============-============-============-==========*/
+
+.modal .modal-header h5 {
+    font-size: 1.5rem;
+}
+
+.modal .modal-body {
+    padding: 2rem;
+}
+
+.modal .modal-body iframe {
+    width: 100%;
+    border-radius: 4px;
 }
 
 /*============-============-============-============
