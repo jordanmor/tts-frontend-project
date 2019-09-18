@@ -1,6 +1,6 @@
 ## TTS Front End Project | [Live Demo](https://jordanmor.github.io/tts-frontend-project/)
 
-A thorough recreation of the The Hartford's About Me page with a functional sidebar and navbar using HTML, CSS, JQuery, Bootstrap and responsive web design.
+A thorough recreation of the The Hartford's About Us page with a functional sidebar and navbar using HTML, CSS, JQuery, Bootstrap and responsive web design.
 
 **Screencast of the TTS Front End Project - up for review by The Hartford**  
  
@@ -14,7 +14,7 @@ A thorough recreation of the The Hartford's About Me page with a functional side
 - Using CSS, recreate the smaller animated elements of the page that add an interactive feel to the site. 
 - Find, edit and optimize SVG icons that closely resemble the icons used on The Hartford's site. Use Affinity Designer and Jake Archibald's SVGOMG for SVG editing and optimization.
 - Open a modal with a YouTube video about The Hartford's Human Achievement Programs when associated link clicked on page. Use jQuery to make sure the video no longer plays in the background if the modal is closed before the video play has ended.
-- Add a link and a downloadable PDF fact sheet about The Hartford as it is present on the The Hartford's About Me page
+- Add a link and a downloadable PDF fact sheet about The Hartford as it is present on the The Hartford's About Us page
 - Showcase an attention to detail with this project.
 
 **Web page tested in the following browsers:** Chrome, Safari and Firefox 
@@ -23,6 +23,9 @@ A thorough recreation of the The Hartford's About Me page with a functional side
 **Project Due:** 09/18/2019   
 **Project Completed:** 09/18/2019  
 
+-- Link to The Hartford's actual About Us page --   
+https://www.thehartford.com/about-us
+
 ### Original Project Instructions 
 
 - Choose one of the three example sites listed below.
@@ -30,7 +33,7 @@ A thorough recreation of the The Hartford's About Me page with a functional side
 - When building your version of the site, don't worry about making it exactly the same to the pixel. Instead, focus on creating the same structure, sections, text/images, etc.
 - Don't forget to utilize quick tools available to you, like Bootstrap's components. 
 - URLs of example sites:  
-    - thehartford.com/about-us  
+    - [thehartford.com/about-us](https://www.thehartford.com/about-us) 
     - shopify.com  
     - wordpress.com  
 
