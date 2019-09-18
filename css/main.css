@@ -119,16 +119,22 @@ form button:focus {
 
 a.animated-arrow {
     display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 a.animated-arrow:hover {
     text-decoration: underline;
 }
 
+a.animated-arrow span {
+    margin-right: .35rem;
+}
+
 a.animated-arrow img {
+    height: 15px;
     width: 15px;
     transform: translateX(0px) rotate(-90deg);
-    margin-left: .2rem;
     transition: .3s ease-out;
 }
 
@@ -608,7 +614,7 @@ main .more a {
 }
 
 main .more .pdf::before {
-    content: url('/img/pdf.svg');
+    content: url('../img/pdf.svg');
     position: relative;
     display: inline-block;
     width: 20px;
@@ -713,8 +719,11 @@ footer .legal li + li {
 }
 
 footer .copyright {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     color: #555;
+    font-size: .9rem;
 }
 
 /*============-============-============-============
@@ -1070,6 +1079,29 @@ footer .copyright {
 @media (min-width: 1240px) {
     main .blockquote {
         width: 54%;
+    }
+
+    .content-header .nav-link {
+        font-size: 1.2rem;
+    }
+
+    .secondary-menu .nav-item {
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+    }
+
+    .secondary-menu .my-account {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .secondary-menu .nav-link {
+        font-size: .9rem;
+    }
+
+    .my-account .dropdown-menu {
+        top: 45px;
+        left: -510px;
     }
 }
 
